@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="Elexis-Server" sequenceNumber="1476269114">
+<target name="Elexis-Server" sequenceNumber="1476273820">
   <locations>
     <location includeMode="slicer" includeAllPlatforms="true" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="ch.rgw.utility" version="3.2.0.b20160527-0936"/>
-      <unit id="ch.elexis.core" version="3.2.0.b20160920-0555"/>
+      <unit id="ch.elexis.core" version="3.2.0.b20161005-0759"/>
       <unit id="ch.elexis.core.importer.div" version="3.2.0.b20160316-1430"/>
       <unit id="ch.elexis.core.hl7.v2x" version="3.2.0.b20160914-1139"/>
       <unit id="ch.elexis.core.findings" version="1.0.0.b20160920-1214"/>
