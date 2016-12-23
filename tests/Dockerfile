@@ -40,7 +40,9 @@ RUN chown -R es:es /app  /home/es/
 USER es
 RUN mkdir -p /home/es/elexis-server/logs
 COPY assets/shiro.ini assets/elexis-connection.xml /home/es/elexis-server/
-COPY assets/start_elexis_server_test assets/wait-for-it.sh assets/create_server_test_db.mysql assets/telnet_test.expect assets/install_fhir.sh /app/
+COPY assets/start_elexis_server_test assets/wait-for-it.sh assets/telnet_test.expect assets/install_fhir.sh /app/
 # RUN /app/install_fhir.sh
 CMD /app/start_elexis_server_test
 WORKDIR /home/es
+EXPOSE 8380 7234
+

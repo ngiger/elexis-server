@@ -18,6 +18,8 @@ services:
       #- assets/mysql_elexis.cnf:/etc/my.cnf
       # File in this directory must not be world readable or the mysqld will simply ignore it!
       - ${PWD}/assets:/etc/mysql/conf.d
+      # the SQL files under rsc will populate the MySQL database on the first startup
+      - ${PWD}/initdb:/docker-entrypoint-initdb.d
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: dummy
       # this variables also used tests/assets/elexis-connection.xml
@@ -26,7 +28,8 @@ services:
       MYSQL_DATABASE: elexis_server_test
 
   es: # elexis-server
-    build: .
+    # build: .
+    image: ngiger/elexis-server:0.1.1
     networks:
       private:
       public:
